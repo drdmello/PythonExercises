@@ -16,8 +16,9 @@ def decompress(inputString):
     numberOfRepeats = 0
     inRepeatExpression = False
     repeatExpression = ''
+    inputStringIndex = 0
     
-    for inputStringIndex in range(len(inputString)):
+    while (inputStringIndex < len(inputString)):
         
         currentCharacter = inputString[inputStringIndex:inputStringIndex+1]
         if __debug__:
@@ -45,6 +46,8 @@ def decompress(inputString):
 
         if __debug__:
             print '*** INFO: ' + 'numOfRepeatsString: ' + numberOfRepeatsString + ' numOfRepeats: ' + str(numberOfRepeats)
+
+        inputStringIndex += 1
            
     return result
 
